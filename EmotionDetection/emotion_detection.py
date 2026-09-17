@@ -28,10 +28,3 @@ def emotion_detector(text_to_analyse):
                     'dominant_emotion': None
         }
     return end_response
-        
-def main():
-    response = emotion_detector("I love this new technology.")
-    print(response)
-
-if __name__=="__main__":
-    main()
