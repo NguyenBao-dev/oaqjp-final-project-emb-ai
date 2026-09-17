@@ -1,5 +1,5 @@
 from flask import Flask, request, render_template
-from final_project.emotion_detection import emotion_detector
+from EmotionDetection.emotion_detection import emotion_detector
 
 app = Flask("Emotion Detector")
 
