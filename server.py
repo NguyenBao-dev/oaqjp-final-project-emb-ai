@@ -5,6 +5,9 @@ app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
 def emote_detector():
+    """ 
+    GET the response based on the user text input
+    """
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
     anger, disgust, fear, joy, sadness = (
@@ -29,7 +32,11 @@ def emote_detector():
 
 @app.route("/")
 def render_index_page():
+    """
+    Intialize the home page of the interface with index.html template
+    """
     return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000)
+    
